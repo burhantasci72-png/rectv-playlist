@@ -1,12 +1,10 @@
 name: RecTV M3U Guncelleyici
 
-# Bot ne zaman çalışsın?
 on:
   schedule:
-    - cron: '0 */3 * * *' # Her 3 saatte bir otomatik çalışır. (Zamanı değiştirebilirsiniz)
-  workflow_dispatch: # Bu sayede GitHub üzerinden butona basarak manuel de çalıştırabilirsiniz.
+    - cron: '0 */3 * * *' 
+  workflow_dispatch: 
 
-# Bota dosyayı depoya kaydetme yetkisi veriyoruz
 permissions:
   contents: write
 
@@ -28,14 +26,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Python Betiğini Çalıştır (M3U Oluştur)
+      - name: Python Betiğini Çalıştır (Listeleri Oluştur)
         run: python main.py
 
-      - name: Değişiklikleri Kaydet ve GitHub'a Yükle (Push)
+      - name: Değişiklikleri Kaydet ve GitHub'a Yükle
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add playlist.m3u
-          # Eğer dosyada değişiklik yoksa hata vermemesi için:
-          git commit -m "M3U Listesi Otomatik Güncellendi [skip ci]" || echo "Değişiklik yok"
+          # Sadece tek dosya değil, oluşan TÜM m3u dosyalarını ekle:
+          git add *.m3u
+          git commit -m "M3U Listeleri Otomatik Güncellendi[skip ci]" || echo "Değişiklik yok"
           git push
