@@ -10,7 +10,7 @@ REFERER = "https://twitter.com/"
 # Sonsuz döngüyü engellemek için güvenlik amaçlı maksimum sayfa sayısı (1 sayfa ort. 15-20 film içerir. 200 sayfa = ~4000 film)
 MAX_PAGES = 200 
 
-# Kategori Listesi (Artık sayfa sayısı belirtmiyoruz, API "bitti" diyene kadar hepsini çekecek)
+# TÜM KATEGORİ LİSTESİ (Macera, Fantastik ve Romantik eklendi)
 CATEGORIES_TO_FETCH = {
     "Canli TV": f"{MAIN_URL}/api/channel/by/filtres/0/0/SAYFA/{SW_KEY}/",
     "Son Filmler": f"{MAIN_URL}/api/movie/by/filtres/0/created/SAYFA/{SW_KEY}/",
@@ -20,8 +20,11 @@ CATEGORIES_TO_FETCH = {
     "Belgesel": f"{MAIN_URL}/api/movie/by/filtres/19/created/SAYFA/{SW_KEY}/",
     "Bilim Kurgu": f"{MAIN_URL}/api/movie/by/filtres/4/created/SAYFA/{SW_KEY}/",
     "Dram": f"{MAIN_URL}/api/movie/by/filtres/2/created/SAYFA/{SW_KEY}/",
+    "Fantastik": f"{MAIN_URL}/api/movie/by/filtres/10/created/SAYFA/{SW_KEY}/",
     "Komedi": f"{MAIN_URL}/api/movie/by/filtres/3/created/SAYFA/{SW_KEY}/",
-    "Korku": f"{MAIN_URL}/api/movie/by/filtres/8/created/SAYFA/{SW_KEY}/"
+    "Korku": f"{MAIN_URL}/api/movie/by/filtres/8/created/SAYFA/{SW_KEY}/",
+    "Macera": f"{MAIN_URL}/api/movie/by/filtres/17/created/SAYFA/{SW_KEY}/",
+    "Romantik": f"{MAIN_URL}/api/movie/by/filtres/5/created/SAYFA/{SW_KEY}/"
 }
 
 def get_token():
@@ -92,7 +95,7 @@ def main():
             with open(cat_filename, 'w', encoding='utf-8') as f_cat:
                 f_cat.write("#EXTM3U\n")
                 
-                # Tüm sayfaları çeken yeni fonksiyonumuzu çağırıyoruz
+                # Tüm sayfaları çeken fonksiyonumuzu çağırıyoruz
                 items = fetch_data(cat_name, cat_url, token)
                 
                 for item in items:
