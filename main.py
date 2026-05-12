@@ -2,7 +2,7 @@ import requests
 import time
 
 # --- AYARLAR ---
-MAIN_URL = "https://a.prectv67.lol"
+MAIN_URL = "https://a.prectv70.lol"
 SW_KEY = "4F5A9C3D9A86FA54EACEDDD635185/c3c5bd17-e37b-4b94-a944-8a3688a30452"
 USER_AGENT = "googleusercontent"
 REFERER = "https://twitter.com/"
