@@ -1,15 +1,43 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/666cbc1feac437aea3fc2c8218b9539e.jpg" group-title="Canli TV",NATIONAL GEO HD #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/natgeo/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/ae18d42e87a266954420b315bb23c749.jpg" group-title="Canli TV",NATIONAL GEO WILD #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/natgeowild/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/77f52eb67864c8f809626fa5c7d1bae6.png" group-title="Canli TV",HISTORY CHANNEL #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/history/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/9ed6faa15f968198d17c0362658f6b50.jpg" group-title="Canli TV",BBC EARTH HD #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/bbc/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/b61d518744b390174e6f672d7171107d.png" group-title="Canli TV",TARİH TV #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/tarihtv/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/d90ba2bcb80b997800fbe4824f1d71c6.png" group-title="Canli TV",Docubox #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/docubox/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/08cd8548f90ea341ac8bf315ec5ab4f9.jpg" group-title="Canli TV",TLC #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/tlc/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/8c8f9b27a338d4b5713098251d9f5284.png" group-title="Canli TV",DMAX HD #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/dmax/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/717339637240b8d0ade5063ae8a18fcd.png" group-title="Canli TV",YABAN TV #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/yaban/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/45a6752ed9a833b4d0303885092b8f54.png" group-title="Canli TV",DISCOVERY CHANNEL #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/discovery/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/a83bf94e67fe34718d644ed9da8ca82d.png" group-title="Canli TV",DISCOVERY SCIENCE #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/discs/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/cee1ae3bfe067fe869b8e20c0272938b.jpg" group-title="Canli TV",TRT BELGESEL HD #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
-#EXTINF:-1 tvg-logo="https://a.prectv67.lol/uploads/cache/channel_thumb/uploads/png/c34095b97dc3f94306666eec346defb8.png" group-title="Canli TV",LOVE NATURE #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/lovenature/index.m3u8?token=NKGgOqJbNwMAFwbpkdblag&tms=1779632504
-#EXTINF:-1 tvg-logo="https://a.prectv67.lol/uploads/cache/channel_thumb/uploads/png/8ea2619561935fed906ee2278d5fa961.png" group-title="Canli TV",VIASAT HISTORY #EXTVLCOPT:http-user-agent=googleusercontent #EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/viasathistory/index.m3u8?token=NKGgOqJbNwMAFwbpkdblag&tms=1779632504
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/666cbc1feac437aea3fc2c8218b9539e.jpg" group-title="Canli TV",NATIONAL GEO HD
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/natgeo/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/ae18d42e87a266954420b315bb23c749.jpg" group-title="Canli TV",NATIONAL GEO WILD
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/natgeowild/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/77f52eb67864c8f809626fa5c7d1bae6.png" group-title="Canli TV",HISTORY CHANNEL
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/history/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/9ed6faa15f968198d17c0362658f6b50.jpg" group-title="Canli TV",BBC EARTH HD
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/bbc/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/b61d518744b390174e6f672d7171107d.png" group-title="Canli TV",TARİH TV
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/tarihtv/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/d90ba2bcb80b997800fbe4824f1d71c6.png" group-title="Canli TV",Docubox
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/docubox/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/08cd8548f90ea341ac8bf315ec5ab4f9.jpg" group-title="Canli TV",TLC
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/tlc/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/8c8f9b27a338d4b5713098251d9f5284.png" group-title="Canli TV",DMAX HD
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/dmax/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/717339637240b8d0ade5063ae8a18fcd.png" group-title="Canli TV",YABAN TV
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/yaban/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/45a6752ed9a833b4d0303885092b8f54.png" group-title="Canli TV",DISCOVERY CHANNEL
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/discovery/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/png/a83bf94e67fe34718d644ed9da8ca82d.png" group-title="Canli TV",DISCOVERY SCIENCE
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/discs/index.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv70.lol/uploads/cache/channel_thumb/uploads/jpg/cee1ae3bfe067fe869b8e20c0272938b.jpg" group-title="Canli TV",TRT BELGESEL HD
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8?token=eJwWsN_5iTs_IkhjrEwG-w&tms=1779632880
+#EXTINF:-1 tvg-logo="https://a.prectv67.lol/uploads/cache/channel_thumb/uploads/png/c34095b97dc3f94306666eec346defb8.png" group-title="Canli TV",LOVE NATURE
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/lovenature/index.m3u8?token=NKGgOqJbNwMAFwbpkdblag&tms=1779632504
+#EXTINF:-1 tvg-logo="https://a.prectv67.lol/uploads/cache/channel_thumb/uploads/png/8ea2619561935fed906ee2278d5fa961.png" group-title="Canli TV",VIASAT HISTORY
+#EXTVLCOPT:http-user-agent=googleusercontent
+#EXTVLCOPT:http-referrer=https://twitter.com/ https://nord.ayakkabiparti.lol/viasathistory/index.m3u8?token=NKGgOqJbNwMAFwbpkdblag&tms=1779632504
