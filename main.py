@@ -1,16 +1,14 @@
 import requests
 import time
+import json
 
 # --- AYARLAR ---
 MAIN_URL = "https://a.prectv70.lol"
 SW_KEY = "4F5A9C3D9A86FA54EACEDDD635185/c3c5bd17-e37b-4b94-a944-8a3688a30452"
-USER_AGENT = "googleusercontent"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" # Daha gerçekçi bir User-Agent
 REFERER = "https://twitter.com/"
-
-# Sonsuz döngüyü engellemek için güvenlik amaçlı maksimum sayfa sayısı (1 sayfa ort. 15-20 film içerir. 200 sayfa = ~4000 film)
 MAX_PAGES = 200 
 
-# TÜM KATEGORİ LİSTESİ (Macera, Fantastik ve Romantik eklendi)
 CATEGORIES_TO_FETCH = {
     "Canli TV": f"{MAIN_URL}/api/channel/by/filtres/0/0/SAYFA/{SW_KEY}/",
     "Son Filmler": f"{MAIN_URL}/api/movie/by/filtres/0/created/SAYFA/{SW_KEY}/",
@@ -31,13 +29,19 @@ def get_token():
     """Yeni Bearer Token Alır"""
     url = f"{MAIN_URL}/api/attest/nonce"
     headers = {"User-Agent": USER_AGENT}
-    response = requests.get(url, headers=headers)
-    if response.status_code == 200:
-        try:
-            return response.json().get("accessToken", response.text.strip())
-        except:
-            return response.text.strip()
-    return None
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code == 200:
+            try:
+                return response.json().get("accessToken", response.text.strip())
+            except json.JSONDecodeError:
+                return response.text.strip()
+        else:
+            print(f"[HATA] Token alınamadı. Sunucu Yanıtı: {response.status_code}")
+            return None
+    except Exception as e:
+        print(f"[HATA] Token isteği sırasında bağlantı sorunu: {e}")
+        return None
 
 def fetch_data(category_name, category_url, token):
     """Kategorideki TÜM verileri bitene kadar çeker"""
@@ -46,26 +50,32 @@ def fetch_data(category_name, category_url, token):
         "Referer": REFERER,
         "Authorization": f"Bearer {token}"
     }
-    all_items =[]
+    all_items = []
     
     for page in range(MAX_PAGES):
         url = category_url.replace("SAYFA", str(page))
-        response = requests.get(url, headers=headers)
-        
-        if response.status_code == 200:
-            try:
-                data = response.json()
-                # EĞER SAYFA BOŞ GELİRSE (Tüm filmler bittiyse) döngüyü kır!
-                if not data: 
-                    print(f"    -> [{category_name}] İçerik bitti. Toplam çekilen sayfa: {page}")
+        try:
+            response = requests.get(url, headers=headers, timeout=10)
+            
+            if response.status_code == 200:
+                try:
+                    data = response.json()
+                    if not data: 
+                        print(f"    -> [{category_name}] İçerik bitti. Toplam çekilen sayfa: {page}")
+                        break
+                    
+                    all_items.extend(data)
+                    time.sleep(0.5) # GitHub Actions'da ban riskini düşürmek için süreyi biraz artırdık
+                    
+                except json.JSONDecodeError:
+                    print(f"    -> [HATA] JSON parçalanamadı! Sayfa engellenmiş olabilir (Cloudflare vs.). Yanıtın ilk 100 karakteri: {response.text[:100]}")
                     break
-                
-                all_items.extend(data)
-                time.sleep(0.1) # Sunucuyu yorup ban yememek için milisaniyelik ufak bir bekleme
-                
-            except:
+            else:
+                print(f"    -> [HATA] API {response.status_code} hatası verdi. Sayfa: {page}")
                 break
-        else:
+                
+        except Exception as e:
+            print(f"    -> [HATA] Bağlantı Hatası: {e}")
             break
             
     return all_items
@@ -75,33 +85,36 @@ def clean_filename(name):
     return name.lower().replace(" ", "_").replace("ı", "i").replace("ç", "c").replace("ş", "s").replace("ö", "o").replace("ğ", "g").replace("ü", "u")
 
 def main():
+    print("Token alınıyor...")
     token = get_token()
     if not token:
-        print("Token alinamadi!")
+        print("Token alınamadığı için işlem durduruldu!")
         return
 
     print("İçerikler çekiliyor. Bu işlem kategorideki tüm filmler çekileceği için biraz sürebilir...\n")
 
-    # GENEL LİSTE
     with open("genel_liste.m3u", 'w', encoding='utf-8') as f_general:
         f_general.write("#EXTM3U\n")
         
         for cat_name, cat_url in CATEGORIES_TO_FETCH.items():
             print(f"[*] İşleniyor: {cat_name}")
             
-            # KATEGORİ DOSYASI
             cat_filename = f"{clean_filename(cat_name)}.m3u"
             
             with open(cat_filename, 'w', encoding='utf-8') as f_cat:
                 f_cat.write("#EXTM3U\n")
                 
-                # Tüm sayfaları çeken fonksiyonumuzu çağırıyoruz
                 items = fetch_data(cat_name, cat_url, token)
                 
+                if not items:
+                    print(f"    -> UYARI: {cat_name} için hiç içerik bulunamadı!")
+                    continue
+                
+                eklenen_sayi = 0
                 for item in items:
                     title = item.get("title", "Isimsiz").replace(",", " ")
                     image = item.get("image", "")
-                    sources = item.get("sources",[])
+                    sources = item.get("sources", [])
                     
                     if sources:
                         stream_url = sources[0].get("url", "")
@@ -115,6 +128,9 @@ def main():
                             
                             f_cat.write(m3u_entry)
                             f_general.write(m3u_entry)
+                            eklenen_sayi += 1
+                            
+                print(f"    -> [{cat_name}] Başarıyla {eklenen_sayi} link M3U dosyasına eklendi.")
                             
     print("\n[+] BÜTÜN KATEGORİLERİN TÜM FİLMLERİ BAŞARIYLA ÇEKİLDİ VE KAYDEDİLDİ!")
 
